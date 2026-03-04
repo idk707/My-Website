@@ -10,14 +10,21 @@
     <div class="title_container">
         <div class="title_background">
 
-            <div class="menu_container">
-                hey
+            <button id="menu" class="menu_container" onclick="toggleMenu()" >
                 <div class="menu_stick"></div>
-            </div>
+                <div class="menu_stick"></div>
+                <div class="menu_stick"></div>
+            </button>
             <div class="title">
                 <h1>Cauan's Portfolio</h1>
             </div>
         </div>
+        <nav id="side_menu" class="hidden_menu">
+            <div class="close_button" onclick="toggleMenu()">x</div>
+            <ul>
+                <li><a href="/index.html">Home Page</a></li>
+            </ul>
+        </nav>
     </div>
 <!--     
    <div class="about_container">
