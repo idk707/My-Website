@@ -2,6 +2,11 @@ body{
     margin: 0;
     padding: 0;
 }
+button{
+    cursor:pointer;
+    background-color: transparent;
+    border:none;
+}
 
 .total_container{
     min-width: 100vw;
@@ -73,6 +78,7 @@ body{
     width: 30px;
     height: 5px;
 }
+
 #side_menu{
     display: flex;
     flex-direction: column;
@@ -89,7 +95,7 @@ body{
 }
 .close_button{
     cursor: pointer;
-    font-size: 20px;
+    font-size: 25px;
     font-weight: bold;
 }
 #side_menu.visible{
