@@ -14,17 +14,10 @@ body{
         opacity: 1;
     }
 }
-button{
-    cursor:pointer;
-    background-color: transparent;
-    border:none;
-}
-
 .total_container{
     min-width: 100vw;
     min-height: 100vh;
 }
-
 .title_container{
     display: flex;
     align-items: center;
