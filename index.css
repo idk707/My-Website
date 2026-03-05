@@ -107,11 +107,16 @@ a{
     font-weight: bold;
     font-size: 15px;
     margin: 20px;
+    opacity: 0.25;
     transition: color 0.6s ease;
+    transition: transform 0.6s ease;
 }
 a:hover{
+    /* font-size: larger; */
     color: #f4a460;
-    transition: 0.7s ease-in-out;
+    opacity: 1;
+    transition: 1s ease-in-out;
+    transform: scale(1.5);
 }
 
 /* .close_button{
