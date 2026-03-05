@@ -2,7 +2,7 @@ body{
     /* overflow: hidden; */
     margin: 0;
     padding: 0;
-    background-color: #f4f6f5;
+    background-color: bisque;
 }
 button{
     cursor:pointer;
@@ -19,7 +19,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(185deg, #74c372, #4fa64d); 
+    background-color: #f4a460;
     min-height: 100vh;
     width: 100%;
 }
@@ -30,8 +30,8 @@ button{
     flex-direction: column;
     position: relative;
     border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.15);
-    background-color:rgb(234, 236, 233);
+    box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: #ffe4c4;
     min-height: 630px;
     width: 95%;
 }
@@ -41,10 +41,6 @@ button{
     position: absolute;
     top: 5px;
     left: 150px;
-    transition: 1s ease;
-}
-.title :hover{
-    color: rgb(74, 74, 74);
 }
 .about_container{
     display: flex;
