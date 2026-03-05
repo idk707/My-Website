@@ -5,7 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
   open.addEventListener('click', () => {
     menu.classList.add('visible');
-    menu.classList.remove()
 
   });
 
