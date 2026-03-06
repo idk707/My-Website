@@ -116,6 +116,7 @@ a:hover{
     transform: scale(1.5);
 }
 .submit_btn{
+    cursor: pointer;
     font-size: 13px; 
     width: 20%; 
     margin-top: 10px;

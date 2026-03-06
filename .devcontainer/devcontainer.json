@@ -1,0 +1,32 @@
+{
+  "name": "BrothersTileProject",
+  "image": "mcr.microsoft.com/devcontainers/python:3.11",
+
+  "forwardPorts": [5000, 5500],
+
+  "portsAttributes": {
+    "5000": {
+      "label": "Flask",
+      "onAutoForward": "notify",
+      "visibility": "public"
+    },
+    "5500": {
+      "label": "Frontend",
+      "onAutoForward": "openBrowser",
+      "visibility": "public"
+    }
+  },
+
+  // Run this only once when the container is created
+  "postCreateCommand": "pip install -r confidential/requirements.txt",
+
+  // Run this every time the container starts
+  "postStartCommand": "cd contact_page && python contact.py",
+
+  "remoteEnv": {
+    // These will come from your .env file, which you keep out of Git
+    "EMAIL_USER": "${localEnv:EMAIL_USER}",
+    "EMAIL_PASS": "${localEnv:EMAIL_PASS}"
+  }
+
+}
