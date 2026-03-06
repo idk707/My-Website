@@ -8,14 +8,54 @@
 </head>
 <body>
     <div class="total_container">
-        <div class="contact_container">
-            <div class="contact_title">
-               <span style="font-size: 30px;">CONTACT</span> <br>
-               <p>Get in touch with me!</p>
-               <label for="first_name">First Name:</label>
-                <input type="text" id="first_name" name="first_name">
+       
+
+        <div id="menu" class="menu_container">
+                <a href="/index.html">Home</a>
+                <a href="/projects page/projects.html">Projects</a>
+                <a href="/contact page/contact.html">Contact</a>
             </div>
-        
+
+
+
+        <div class="contact_container">
+            <div class="contact_section">
+                <span style="font-size: 40px;">Contact Page</span> 
+                <br>
+                <caption>Get in touch with me!</caption>
+                <br> <br>
+                <form id="contactForm">
+                    <div>
+                        <label class="placeholder" for="firtName">First Name<span style="color: red; font-weight: normal;">*</span>:</label>
+                        <input style="text-align: center;" type="text" name="firstName" id="firstName" placeholder="John" required>
+
+                        <label class="placeholder" for="lastName">Last Name<span style="color: red; font-weight: normal;">*</span>:</label>
+                        <input style="text-align: center;" type="text" name="lastName" id="lastName" placeholder="Doe" required>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <label class="placeholder" for="phoneNumber">Phone Number<span style="color: red; font-weight: normal;">*</span>:</label>
+                        <input style="text-align: center;" type="tel" name="phoneNumber" id="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+
+                        <label class="placeholder" for="email">Email:</label>
+                        <input style="text-align: center;" type="email" name="email" id="email"  placeholder="example@gmail.com">
+                    </div>
+                    <div class="centeralize">
+                        <label for="message" class="placeholder">Message</label>
+                    </div>
+                    <div>
+                        <textarea class="message_box" name="message" id="message"></textarea>
+                    </div>
+                    <div>
+                        <input class="submit_btn" type="submit" value="Submit">
+                    </div>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+
         </div>
     </div>
 </body>

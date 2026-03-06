@@ -1,4 +1,5 @@
 body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin: 0 auto;
     padding: 0;
     background-color: bisque;
@@ -19,4 +20,108 @@ body{
     justify-content: center;
     min-height: 100vh;
     min-width: 100vw;
+}
+.contact_title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4a460;
+    min-height: 100vh;
+    width: 100%;
+}
+.contact_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+}
+
+.contact_section{
+    min-height: 100%;
+    width: 53%;
+}
+
+.placeholder{
+    display: flex;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+.centeralize{
+    display:flex; 
+    margin-top: 15px; 
+    justify-content: center;
+}
+
+.message_box{
+    width: 100%;
+    height: 200px;
+    margin: 0 auto;
+    display: block;
+}
+input, textarea{
+    width: 100%;
+    height: 5px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.title{
+    color: black;
+    display: flex;
+    position: absolute;
+    top: 5px;
+    left: 150px;
+    /* opacity: 0.55; */
+    transition: color 0.6s ease;
+}
+.title:hover{
+    color: #f4a460;
+    transition: 1s ease-in-out;
+}
+
+.menu_container{
+    position: absolute;
+    flex-direction: row;
+    top: 30px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 25px;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+    margin: 20px;
+    opacity: 0.35;
+    transition: color 0.6s ease;
+    transition: transform 0.6s ease;
+}
+a:hover{
+    /* font-size: larger; */
+    color: #f4a460;
+    opacity: 1;
+    transition: 1s ease-in-out;
+    transform: scale(1.5);
+}
+.submit_btn{
+    font-size: 13px; 
+    width: 20%; 
+    margin-top: 10px;
+    margin-left: 18px; 
+    display: flex; 
+    justify-self: right; 
+    text-align: center; 
+    height: 35px;
 }
