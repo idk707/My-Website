@@ -16,34 +16,30 @@ document.getElementById('phoneNumber').addEventListener('input', function(e){
     e.target.value = formatted;
 });
 
-document.getElementById('contactForm').addEventListener('submit', function(e){
+const form = document.getElementById('contactForm');
+const stats = document.getElementById('status');
+
+form.addEventListener('submit', async function(e) {
     e.preventDefault();
 
-    const firstName = document.getElementById('firstName').value;
-    const lastName = document.getElementById('lastName').value;
-    const phoneNumber = document.getElementById('phoneNumber').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    stats.innerText = "Sending...";
 
-fetch("https://friendly-giggle-5ggj4jgg79q5hvq47-5501.app.github.dev/contact", {
-    method: "POST",
+    const formData = new FormData(form);
 
-    headers: {
-        "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-        firstName,
-        lastName,
-        phoneNumber,
-        email,
-        message
-    })
-})
-.then(res => res.json())
-.then(data => {
-    alert(data.message);
-    this.reset();
-})
-.catch(err => console.error("Error:", err));
-    });
-        
+    try{
+        const response = await fetch('/send-message', {
+            method: 'POST',
+            body: formData
+        });
+
+        if(response.ok){
+            stats.innerText = "Message sent successfully!";
+            form.reset();
+        } else {
+            stats.innerText = "Failed to send message. Please try again.";
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        stats.innerText = "An error occurred. Please try again.";
+    }
+});

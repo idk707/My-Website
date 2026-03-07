@@ -1,5 +1,5 @@
 {
-  "name": "BrothersTileProject",
+  "name": "My Website",
   "image": "mcr.microsoft.com/devcontainers/python:3.11",
 
   "forwardPorts": [5000, 5500],
@@ -27,6 +27,8 @@
     // These will come from your .env file, which you keep out of Git
     "EMAIL_USER": "${localEnv:EMAIL_USER}",
     "EMAIL_PASS": "${localEnv:EMAIL_PASS}"
-  }
+  },
+
+  "workspaceFolder": "/workspaces/My-Website"
 
 }

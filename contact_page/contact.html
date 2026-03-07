@@ -24,31 +24,37 @@
                 <br>
                 <caption>Get in touch with me!</caption>
                 <br> <br>
-                <form id="contactForm">
+                <form action="/send-message" method="POST" id="contactForm">
                     <div>
-                        <label class="placeholder" for="firtName">First Name<span style="color: red; font-weight: normal;">*</span>:</label>
+                        <label class="placeholder" for="firstName">First Name<span style="color: red; font-weight: normal;">*</span>:</label>
+                        
                         <input style="text-align: center;" type="text" name="firstName" id="firstName" placeholder="John" required>
 
                         <label class="placeholder" for="lastName">Last Name<span style="color: red; font-weight: normal;">*</span>:</label>
+                        
                         <input style="text-align: center;" type="text" name="lastName" id="lastName" placeholder="Doe" required>
                     </div>
                     <div style="margin-top: 15px;">
-                        <label class="placeholder" for="phoneNumber">Phone Number<span style="color: red; font-weight: normal;">*</span>:</label>
-                        <input style="text-align: center;" type="tel" name="phoneNumber" id="phoneNumber" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="123-456-7890" required>
+                        <label class="placeholder" for="phoneNumber">Phone Number:</label>
+                        
+                        <input style="text-align: center;" type="tel" name="phoneNumber" id="phoneNumber" placeholder="123-456-7890">
 
-                        <label class="placeholder" for="email">Email:</label>
-                        <input style="text-align: center;" type="email" name="email" id="email"  placeholder="example@gmail.com">
+                        <label class="placeholder" for="email">Email<span style="color: red; font-weight: normal;">*</span>:</label>
+                        
+                        <input style="text-align: center;" type="email" name="email" id="email"  placeholder="example@gmail.com" required>
                     </div>
-                    <div class="centeralize">
+                    <div class="centralize">
                         <label for="message" class="placeholder">Message</label>
                     </div>
                     <div>
                         <textarea class="message_box" name="message" id="message"></textarea>
                     </div>
                     <div>
+                        <input type="text" name="company" autocomplete="off" tabindex="-1" style="position: absolute; left: -9999px;">
+
                         <input class="submit_btn" type="submit" value="Submit">
-                    </div>
-                        
+
+                        <p id="status"></p>
                     </div>
                 </form>
             </div>
